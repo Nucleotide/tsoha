@@ -11,3 +11,6 @@ http://laxlax.users.cs.helsinki.fi/esittelysivu.html
 
 Demo:
 http://laxlax.users.cs.helsinki.fi/html-demo/
+
+Connection test:
+http://laxlax.users.cs.helsinki.fi/connectiontest.php
