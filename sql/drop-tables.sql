@@ -1,0 +1,1 @@
+DROP TABLE tarvike, puute, varaus, mokki, kayttaja;
