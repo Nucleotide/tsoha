@@ -1,19 +1,19 @@
-INSERT INTO kayttajat VALUES
+INSERT INTO kayttaja (name, password) VALUES
 	('testi', 'testaus'),
 	('testaaja', 'testeri');
 
-INSERT INTO mokki VALUES
+INSERT INTO mokki (name) VALUES
 	('mokki1'),
 	('mokki2');
 	
-INSERT INTO varaus VALUES
-	(1, 1, to_date('01-03-2014', 'DD-MM-YYYY'), to_date('31-03-2014', 'DD-MM-YYYY')),
-	(2, 2, to_date('01-04-2014', 'DD-MM-YYYY'), to_date('07-04-2014', 'DD-MM-YYYY'));
+INSERT INTO varaus (kayttaja_id, mokki_id, alkupvm, loppupvm) VALUES
+	(1, 1, to_date('2014-01-22', 'YYYY-MM-DD'), to_date('2014-04-01', 'YYYY-MM-DD')),
+	(2, 2, to_date('2014-02-15', 'YYYY-MM-DD'), to_date('2014-03-01', 'YYYY-MM-DD'));
 	
-INSERT INTO puute VALUES
-	(1, 1, 'Maitoa tarvitaa', GETDATE()),
-	(2, 2, 'Juustoa', GETDATE());
+INSERT INTO puute (kayttaja_id, mokki_id, kuvaus, luotu) VALUES
+	(1, 1, 'Maitoa tarvitaan', CURRENT_DATE),
+	(2, 2, 'Juustoa', CURRENT_DATE);
 	
-INSERT INTO tarvike VALUES
-	(1, 'Leipää', GETDATE()),
-	(2, 'Kalaa', GETDATE());
+INSERT INTO tarvike (mokki_id, kuvaus, luotu) VALUES
+	(1, 'Leipää', CURRENT_DATE),
+	(2, 'Kalaa', CURRENT_DATE);
