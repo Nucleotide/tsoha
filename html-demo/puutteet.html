@@ -11,10 +11,10 @@
     	<nav class="navbar navbar-default navbar-static-top" role="navigation">
   			<div class="container">
   				<ul class="nav navbar-nav">
-  					<li class="active"><a href="http://laxlax.users.cs.helsinki.fi/html-demo/">Etusivu</a></li>
+  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/">Etusivu</a></li>
   					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin1.html">Mökki 1</a></li>
   					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin2.html">Mökki 2</a></li>
-  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/puutteet.html">Kaikki puutteet</a></li>
+  					<li class="active"><a href="http://laxlax.users.cs.helsinki.fi/html-demo/puutteet.html">Kaikki puutteet</a></li>
   					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a></li>
   					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/login.html">Kirjaudu ulos</a></li>
   				</ul>
@@ -22,32 +22,36 @@
 		</nav>
 		
 		<div class="container">
-			<h1>Terve (username)!</h1>
-  			<p>Seuraava mökkeilysi on (varaus)</p>
-			<h3>Tulevia vierailuja mökeille:</h3>
+			<h3>Puutteet mökeillä</h3>
 			
 			<table class="table table-hover table-condensed">
 	         	<tr>
-	          		<th>Kuka?</th>
-	          		<th>Koska menee</th>
-	          		<th>Koska pois</th>
-	          		<th>Minne</th>
+	          		<th>Lisääjä</th>
+	          		<th>Ajankohta</th>
+	          		<th>Mökki</th>
+	          		<th>Puute</th>
       			</tr>
 	         	<tr>
 	          		<td>(username)</td>
-	          		<td>(date begin)</td>
-	          		<td>(date end)</td>
-	          		<td>(mökki)</td>
+	          		<td>(date)</td>
+	          		<td>(cabin)</td>
+	          		<td>(info)</td>
       			</tr>
 	         	<tr>
 	          		<td>(username)</td>
-	          		<td>(date begin)</td>
-	          		<td>(date end)</td>
-	          		<td>(mökki)</td>
+	          		<td>(date)</td>
+	          		<td>(cabin)</td>
+	          		<td>(info)</td>
       			</tr>
+	         	<tr>
+	          		<td>(username)</td>
+	          		<td>(date)</td>
+	          		<td>(cabin)</td>
+	          		<td>(info)</td>
+      			</tr>      			
 			</table>
 			
-			<a class="btn btn-info" type="button" href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-varaus.html">Uusi varaus</a>
+			<a class="btn btn-info" type="button" href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a>
 		</div>
 
     </body>
