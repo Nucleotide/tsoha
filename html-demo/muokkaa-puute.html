@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/bootstrap-theme.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+        <title>Demo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  			<div class="container">
+  				<ul class="nav navbar-nav">
+  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/">Etusivu</a></li>
+  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin1.html">Mökki 1</a></li>
+  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin2.html">Mökki 2</a></li>
+  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/puutteet.html">Kaikki puutteet</a></li>
+  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a></li>
+  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/login.html">Kirjaudu ulos</a></li>
+  				</ul>
+  			</div>
+		</nav>
+		
+		<div class="container">
+			<form class="form-horizontal">
+			<fieldset>
+			
+			<!-- Form Name -->
+			<legend>Muokkaa puutetta</legend>
+			
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="textinput">Tiedot</label>  
+			  <div class="col-md-4">
+			  <input id="textinput" name="textinput" type="text" placeholder="Tässä lukee vanhta tieto" class="form-control input-md" required=""><br/>
+			  <input id="textinput" name="textinput" type="text" placeholder="Muokattu tieto tähän" class="form-control input-md" required="">
+			    
+			  </div>
+			</div>
+			
+			<!-- Multiple Checkboxes -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="checkboxes">Valitse mökki</label>
+			  <div class="col-md-4">
+			  <div class="checkbox">
+			    <label for="checkboxes-0">
+			      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+			      Mökki 1
+			    </label>
+				</div>
+			  <div class="checkbox">
+			    <label for="checkboxes-1">
+			      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+			      Mökki 2
+			    </label>
+				</div>
+			  </div>
+			</div>
+			
+			</fieldset>
+			</form>
+						
+			<a class="btn btn-success" type="button" href="#">Tallenna</a>
+			<a class="btn btn-danger" type="button" href="#">Peruuta</a>
+		</div>
+
+    </body>
+</html>
