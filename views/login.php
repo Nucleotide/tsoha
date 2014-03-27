@@ -10,13 +10,12 @@
 	
 	    <div class="container">
 	
-	      <form class="form-signin" role="form">
+	     <form action="../doLogin.php" method="POST" class="form-signin" role="form">
 	        <h2 class="form-signin-heading">Kirjaudu sisään</h2>
-	        <input type="username" class="form-control" placeholder="Käyttäjätunnus" required autofocus>
-	        <input type="password" class="form-control" placeholder="Salasana" required>
+	        Käyttäjänimi:<input type="text" name="username" class="form-control"/>
+	        Salasana:<input type="password" name="password" class="form-control"/>
 	        <button class="btn btn-lg btn-primary btn-block" type="submit">Kirjaudu</button>
 	      </form>
-	
 	    </div>
     </body>
 </html>
