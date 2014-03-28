@@ -3,6 +3,7 @@
     <head>
     	<link href="../css/bootstrap.css" rel="stylesheet">
 		<link href="../css/bootstrap-theme.css" rel="stylesheet">
+		<link href="../css/signin.css" rel="stylesheet">
 		<link href="../css/main.css" rel="stylesheet">
         <title>Demo</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -17,14 +18,17 @@
   					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/puutteet.html">Kaikki puutteet</a></li>
   					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a></li>
   					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/login.html">Kirjaudu ulos</a></li>
-  				</ul>	
+  				</ul>
   			</div>
 		</nav>
-		<div class="container">
-		 	 <?php 
-
+			<?php
+			if (!empty($data->virhe));
+  			echo <div class="alert alert-danger">echo $data->virhe; echo </div>
+			endif; ?>
+		 	
+		 	<?php
+	
     		require 'views/'.$sivu;
   			?>
-		</div>
     </body>
 </html>
