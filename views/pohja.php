@@ -9,26 +9,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
+        <?php if (!$sivu == 'login.php'): ?>
     	<nav class="navbar navbar-default navbar-static-top" role="navigation">
-  			<div class="container">
-  				<ul class="nav navbar-nav">
-  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/">Etusivu</a></li>
-  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin1.html">Mökki 1</a></li>
-  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin2.html">Mökki 2</a></li>
-  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/puutteet.html">Kaikki puutteet</a></li>
-  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a></li>
-  					<li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/login.html">Kirjaudu ulos</a></li>
-  				</ul>
-  			</div>
-		</nav>
-			<?php
-			if (!empty($data->virhe));
-  			echo <div class="alert alert-danger">echo $data->virhe; echo </div>
-			endif; ?>
-		 	
-		 	<?php
-	
-    		require 'views/'.$sivu;
-  			?>
+            <ul class="nav navbar-nav">
+                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/">Etusivu</a></li>
+                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin1.html">Mökki 1</a></li>
+                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin2.html">Mökki 2</a></li>
+                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/puutteet.html">Kaikki puutteet</a></li>
+                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a></li>
+                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/login.html">Kirjaudu ulos</a></li>
+            </ul>
+        </nav>
+        <?php endif; ?>
+            <div class="container">
+                <?php
+                require 'views/'.$sivu;
+                ?>
+            </div>
     </body>
 </html>

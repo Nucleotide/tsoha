@@ -1,2 +1,4 @@
-<?php 
-  require 'views/login.php';
+<?php
+  require_once 'libs/common.php';
+
+  naytaNakyma('login.php');

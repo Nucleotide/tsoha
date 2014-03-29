@@ -15,12 +15,5 @@ class Mokki {
   public function setId($id){
 	$this->id = $id;
   }   
-  
-  public funtion getName(){
-  	return $name;
-  }
-  
-  public funtion getId(){
-  	return $id;
-  }
+
 }
