@@ -12,8 +12,8 @@
         <td>(date)</td>
         <td>(cabin)</td>
         <td>(info)</td>
-        <td><a class="btn btn-success" type="button" href="http://laxlax.users.cs.helsinki.fi/html-demo/muokkaa-puute.html">Muokkaa</a></td>
-                <td><a class="btn btn-danger" type="button" href="#">Poista</a></td>
+        <td><a class="btn btn-success" type="button" href="">Muokkaa</a></td>
+                <td><a class="btn btn-danger" type="button" href="">Poista</a></td>
 </tr>
 <tr>
         <td>(username)</td>
@@ -29,4 +29,4 @@
 </tr>      			
 </table>
 
-<a class="btn btn-info" type="button" href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a>
+<a class="btn btn-info" type="button" href="../newneed.php">Lisää puute</a>

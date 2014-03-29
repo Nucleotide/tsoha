@@ -23,4 +23,4 @@
     </tr>
     </table>
 
-    <a class="btn btn-info" type="button" href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-varaus.html">Uusi varaus</a>
+    <a class="btn btn-info" type="button" href="../newbooking.php">Uusi varaus</a>

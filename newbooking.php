@@ -5,4 +5,4 @@
         header('Location: login.php');
     }
 
-    naytaNakyma('puute.php');
+    naytaNakyma('addbooking.php');
