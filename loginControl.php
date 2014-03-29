@@ -1,6 +1,7 @@
 <?php
 
 require_once 'libs/common.php';
+require_once 'libs/models/kayttaja.php';
 
   if (empty($_POST["username"])) {
     naytaNakyma('login.php', array(
@@ -17,7 +18,9 @@ require_once 'libs/common.php';
   
   $salasana = $_POST["password"];
   
-  if ($kayttaja == 'testi' && $salasana == 'testi') {
+  $kirjautuja = Kayttaja::etsiKayttajaTunnuksilla($kayttaja, $salasana);
+
+  if ($kirjautuja->getName() === $kayttaja && $kirjautuja->getPassword() === $salasana) {
     header('Location: index.php');
   } else {
     naytaNakyma('login.php', array(
