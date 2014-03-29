@@ -5,4 +5,4 @@
         header('Location: login.php');
     }
 
-    naytaNakyma('etusivu.php');
+    naytaNakyma('mokki.php');

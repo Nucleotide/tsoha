@@ -21,6 +21,7 @@ require_once 'libs/models/kayttaja.php';
   $kirjautuja = Kayttaja::etsiKayttajaTunnuksilla($kayttaja, $salasana);
 
   if ($kirjautuja->getName() === $kayttaja && $kirjautuja->getPassword() === $salasana) {
+    $_SESSION['user'] = $kayttaja;
     header('Location: index.php');
   } else {
     naytaNakyma('login.php', array(

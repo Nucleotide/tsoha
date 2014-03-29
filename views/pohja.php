@@ -9,22 +9,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <?php if (!$sivu == 'login.php'): ?>
+        <div class="container">
+        <?php if (!empty($_SESSION['user'])): ?>
     	<nav class="navbar navbar-default navbar-static-top" role="navigation">
             <ul class="nav navbar-nav">
-                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/">Etusivu</a></li>
-                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin1.html">Mökki 1</a></li>
-                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/cabin2.html">Mökki 2</a></li>
-                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/puutteet.html">Kaikki puutteet</a></li>
-                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/uusi-puute.html">Lisää puute</a></li>
-                <li><a href="http://laxlax.users.cs.helsinki.fi/html-demo/login.html">Kirjaudu ulos</a></li>
+                <li><a href="../index.php">Etusivu</a></li>
+                <li><a href="../cabin.php">Mökki 1</a></li>
+                <li><a href="../cabin.php">Mökki 2</a></li>
+                <li><a href="../needs.php">Kaikki puutteet</a></li>
+                <li><a href="../newneed.php">Lisää puute</a></li>
+                <li><a href="../logout.php">Kirjaudu ulos</a></li>
             </ul>
         </nav>
         <?php endif; ?>
-            <div class="container">
-                <?php
-                require 'views/'.$sivu;
-                ?>
-            </div>
+            
+            <?php
+            require 'views/'.$sivu;
+            ?>
+        </div>
     </body>
 </html>

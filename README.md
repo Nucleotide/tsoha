@@ -20,3 +20,4 @@ http://laxlax.users.cs.helsinki.fi/listaustesti.php
 
 Login:
 http://laxlax.users.cs.helsinki.fi/login.php
+username: testi, pw: testaus
