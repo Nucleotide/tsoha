@@ -15,5 +15,23 @@ class Mokki {
   public function setId($id){
 	$this->id = $id;
   }   
+  public function getNimi(){
+	return $this->name;
+  } 
+  public function getId(){
+	return $this->id;
+  }   
+  
+  public static function haeKaikki() {
+    $sql = "SELECT id, name FROM mokki";
+    $kysely = getTietokantayhteys()->prepare($sql); $kysely->execute();   
+    $tulokset = array();
+    foreach($kysely->fetchAll(PDO::FETCH_OBJ) as $tulos) {
+      $mokki = new Mokki($tulos->id,$tulos->name);
+
+      $tulokset[] = $mokki;
+    }
+    return $tulokset;
+  }
 
 }

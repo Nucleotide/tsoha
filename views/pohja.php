@@ -10,6 +10,14 @@
     </head>
     <body>
         <div class="container">
+        <?php if (!empty($_SESSION['ilmoitus'])): ?>
+        <div class="alert alert-danger">
+        <?php echo $_SESSION['ilmoitus']; ?>
+        </div>
+        <?php
+        unset($_SESSION['ilmoitus']); 
+        endif;
+        ?>
         <?php if (!empty($_SESSION['user'])): ?>
     	<nav class="navbar navbar-default navbar-static-top" role="navigation">
             <ul class="nav navbar-nav">

@@ -26,7 +26,7 @@ class Kayttaja {
     
     public function getName(){
 	return $this->name;
-    } 
+    }
     
     public function getPassword(){
         return $this->password;
@@ -34,6 +34,15 @@ class Kayttaja {
     public function getId(){
         return $this->id;
     } 
+    
+    public static function findNameByID($id){
+        $sql = "SELECT name from kayttaja where id = $id";
+        $kysely = getTietokantayhteys()->prepare($sql);
+        $kysely->execute(array($id));
+
+        $tulos = $kysely->fetchObject();
+        return $tulos;
+    }
   
   public static function getKayttajat() {
   $sql = "SELECT id, name, password FROM kayttaja";
@@ -61,6 +70,8 @@ class Kayttaja {
             return $user;
         }
     }
+    
+
   
   public function printUser() {
         var_dump(get_object_vars($this));

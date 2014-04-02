@@ -1,39 +1,28 @@
-<form class="form-horizontal">
-<fieldset>
+<?php require_once 'libs/models/mokki.php'; ?>
 
-<!-- Form Name -->
-<legend>Lisää puute</legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Tiedot</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Mitä puuttuu?" class="form-control input-md" required="">
-
-  </div>
-</div>
-
-<!-- Multiple Checkboxes -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="checkboxes">Valitse mökki</label>
-  <div class="col-md-4">
-  <div class="checkbox">
-    <label for="checkboxes-0">
-      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-      Mökki 1
-    </label>
+<form class="form-horizontal" role="form" action="../newneed.php" method="POST">
+    <fieldset>
+    <legend>Lisää puute</legend>
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Tiedot</label>  
+        <div class="col-md-4">
+        <input name="kuvaus" type="text" placeholder="Mitä puuttuu?" class="form-control input-md" autofocus>
         </div>
-  <div class="checkbox">
-    <label for="checkboxes-1">
-      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-      Mökki 2
-    </label>
-        </div>
-  </div>
-</div>
+    </div>
 
-</fieldset>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Valitse mökki</label>
+        <select name="mokki">
+        <?php foreach(Mokki::haeKaikki() as $mokki): ?>
+        <option value="<?php echo $mokki->getId(); ?>"><?php echo $mokki->getNimi(); ?></option>
+        <?php endforeach; ?>
+        </select>
+
+    </div>
+    <input type="hidden" name="user" value="<?php echo $_SESSION['user']; ?>">
+    <input type="hidden" name="luotu" value="<?php echo date("Y-m-d"); ?>">
+
+    </fieldset>
+    <button class="btn btn-success" type="submit">Tallenna</a></button>
+    <a class="btn btn-danger" type="button" href="">Peruuta</a>
 </form>
-
-<a class="btn btn-success" type="button" href="">Tallenna</a>
-<a class="btn btn-danger" type="button" href="">Peruuta</a>
