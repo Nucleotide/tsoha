@@ -1,12 +1,12 @@
 <?php require_once 'libs/models/mokki.php'; ?>
 
-<form class="form-horizontal" role="form" action="../newneed.php" method="POST">
+<form class="form-horizontal" role="form" action="../newneedController.php" method="POST">
     <fieldset>
     <legend>Lisää puute</legend>
     <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Tiedot</label>  
+        <label class="col-md-4 control-label" for="textinput">Mitä puuttuu?</label>  
         <div class="col-md-4">
-        <input name="kuvaus" type="text" placeholder="Mitä puuttuu?" class="form-control input-md" autofocus>
+        <input name="kuvaus" type="text" value="" class="form-control input-md" autofocus>
         </div>
     </div>
 

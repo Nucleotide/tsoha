@@ -10,8 +10,7 @@ class Puute {
   private $kuvaus;
   private $luotu;
 
-  public function __construct($id, $mokki_id, $kayttaja_id, $kuvaus, $luotu) {
-    $this->id = $id;
+  public function __construct($kayttaja_id, $mokki_id, $kuvaus, $luotu) {
     $this->mokki_id = $mokki_id;
     $this->kayttaja_id = $kayttaja_id;
     $this->kuvaus = $kuvaus;
@@ -43,6 +42,9 @@ class Puute {
     public function getLuotu(){
 	return $this->luotu;
     }
+    public function getId(){
+	return $this->Id;
+    }    
     public function setMokki($mokkiid){
       $this->mokki_id = $mokkiid;
     }
@@ -76,14 +78,9 @@ class Puute {
   }
   
     public function lisaaKantaan() {
-    $sql = "INSERT INTO Puute(kayttaja_id, mokki_id, kuvaus,luotu) VALUES(?,?,?,?) RETURNING id";
+    $sql = "INSERT INTO Puute(kayttaja_id, mokki_id, kuvaus,luotu) VALUES(?,?,?,?)";
     $kysely = getTietokantayhteys()->prepare($sql);
 
-    $ok = $kysely->execute(array($this->getUser(), $this->getMokki(), $this->getKuvaus(), $this->getLuotu()));
-    if ($ok) {
-
-      $this->id = $kysely->fetchColumn();
-    }
-    return $ok;
+    $kysely->execute(array($this->getUser(), $this->getMokki(), $this->getKuvaus(), $this->getLuotu()));
     }
 }
