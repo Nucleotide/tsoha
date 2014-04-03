@@ -1,4 +1,7 @@
 <?php require_once 'libs/models/mokki.php'; ?>
+<?php if (!empty($data->virheet)): ?>
+<div class="alert alert-danger"><?php echo $data->virheet; ?></div>
+<?php endif; ?>
 
 <form class="form-horizontal" role="form" action="../newneedController.php" method="POST">
     <fieldset>
@@ -24,5 +27,5 @@
 
     </fieldset>
     <button class="btn btn-success" type="submit">Tallenna</a></button>
-    <a class="btn btn-danger" type="button" href="">Peruuta</a>
+    <a class="btn btn-danger" type="button" href="needs.php">Peruuta</a>
 </form>

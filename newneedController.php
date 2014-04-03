@@ -15,9 +15,7 @@
         header('Location: needs.php');
         $_SESSION['ilmoitus'] = "Puute lisätty.";
     } else {
-        $virheet = $puute->getVirheet();
 
         naytaNakyma('addneed.php', array(
-        'puute' => $puute,
-        'virheet' => $virheet));
+        'virheet' => "Kuvaus ei voi olla tyhjä"));
     }

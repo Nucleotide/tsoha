@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<link href="../css/bootstrap.css" rel="stylesheet">
-		<link href="../css/bootstrap-theme.css" rel="stylesheet">
-		<link href="../css/signin.css" rel="stylesheet">
-		<link href="../css/main.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/signin.css" rel="stylesheet">
+		
         <title>Demo</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <div class="container">
         <?php if (!empty($_SESSION['ilmoitus'])): ?>
-        <div class="alert alert-danger">
+        <div class="alert alert-success">
         <?php echo $_SESSION['ilmoitus']; ?>
         </div>
         <?php

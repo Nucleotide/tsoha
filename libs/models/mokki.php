@@ -33,5 +33,15 @@ class Mokki {
     }
     return $tulokset;
   }
+  
+      public static function findNameByID($id){
+        $sql = "SELECT id, name from mokki where id = ?";
+        $kysely = getTietokantayhteys()->prepare($sql);
+        $kysely->execute(array($id));
+
+        $tulos = $kysely->fetchObject();
+        $mokki = new Mokki($tulos->id,$tulos->name);
+        return $mokki;
+    }
 
 }

@@ -6,6 +6,7 @@
         header('Location: login.php');
     }
     
-    $puutteet = Puute::getPuutteet();
-    
-    naytaNakyma('puute.php', array('puutteet' => $puutteet));
+    $id = $_POST['id'];
+    Puute::poistaPuute($id);
+    $_SESSION['ilmoitus'] = "Puute poistettu.";
+    header('Location: needs.php');

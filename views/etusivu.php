@@ -1,4 +1,4 @@
-<h1>Terve (username)!</h1>
+<h1>Terve <?php echo $data->tervehdys; ?>!</h1>
     <p>Seuraava mökkeilysi on (varaus)</p>
     <h3>Tulevia vierailuja mökeille:</h3>
 

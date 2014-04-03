@@ -36,12 +36,13 @@ class Kayttaja {
     } 
     
     public static function findNameByID($id){
-        $sql = "SELECT name from kayttaja where id = $id";
+        $sql = "SELECT id, name, password from kayttaja where id = ?";
         $kysely = getTietokantayhteys()->prepare($sql);
         $kysely->execute(array($id));
 
         $tulos = $kysely->fetchObject();
-        return $tulos;
+        $kayttaja = new Kayttaja($tulos->id,$tulos->name,$tulos->password);
+        return $kayttaja;
     }
   
   public static function getKayttajat() {
