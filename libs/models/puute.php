@@ -68,7 +68,7 @@ class Puute {
     }     
   
   public static function getPuutteet() {
-    $sql = "SELECT id, kayttaja_id, mokki_id, kuvaus, luotu FROM puute";
+    $sql = "SELECT id, kayttaja_id, mokki_id, kuvaus, luotu FROM puute ORDER BY id";
     $kysely = getTietokantayhteys()->prepare($sql); $kysely->execute();   
     $tulokset = array();
     foreach($kysely->fetchAll(PDO::FETCH_OBJ) as $tulos) {
@@ -90,5 +90,22 @@ class Puute {
         $sql = "DELETE FROM Puute where id = ?";
         $kysely = getTietokantayhteys()->prepare($sql);
         $kysely->execute(array($tunnus));
+    }
+    
+    public static function findByID($id){
+        $sql = "SELECT id, kayttaja_id, mokki_id, kuvaus, luotu FROM puute where id = ?";
+        $kysely = getTietokantayhteys()->prepare($sql);
+        $kysely->execute(array($id));
+
+        $tulos = $kysely->fetchObject();
+        $puute = new Puute($tulos->kayttaja_id,$tulos->mokki_id,$tulos->kuvaus,$tulos->luotu);
+        $puute->setId($tulos->id);
+        return $puute;
+    }
+    
+    public static function paivita($id,$user_id, $kuvaus, $aika){
+        $sql = "UPDATE puute SET kayttaja_id = ?, kuvaus = ?, luotu = ? WHERE id = ?";
+        $kysely = getTietokantayhteys()->prepare($sql);
+        $kysely->execute(array($user_id, $kuvaus, $aika,$id));
     }
 }

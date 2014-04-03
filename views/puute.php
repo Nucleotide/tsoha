@@ -18,7 +18,8 @@
                 <td><?php echo $puute->getLuotu(); ?></td>
                 <td><?php echo $puute->getMokkiname(); ?></td>
                 <td><?php echo $puute->getKuvaus(); ?></td>
-                <td><a class="btn btn-success" type="button" href="">Muokkaa</a></td>
+                <td><a class="btn btn-success" type="button" href="puute.php?id=<?php echo
+                    $puute->getId() ?>">Muokkaa</a></td>
                 <td><form action="../deleteNeed.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $puute->getId(); ?>">
                     <button class="btn btn-danger" type="submit">Poista</button></form>
