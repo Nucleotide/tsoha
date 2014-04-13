@@ -29,7 +29,7 @@ class Puute {
       return $this->mokki_id;
     }
     public function getMokkiname(){
-        $mokki = Mokki::findNameByID($this->kayttaja_id);
+        $mokki = Mokki::findNameByID($this->mokki_id);
         return $mokki->getNimi();
     }
     

@@ -1,5 +1,5 @@
 <h1>Terve <?php echo $data->tervehdys; ?>!</h1>
-    <p>Seuraava mökkeilysi on (varaus)</p>
+    <p>Seuraava mökkeilysi on (TÄHÄN EHKÄ TIETO..)</p>
     <h3>Tulevia vierailuja mökeille:</h3>
 
     <table class="table table-hover table-condensed">
@@ -22,5 +22,7 @@
             <td>(mökki)</td>
     </tr>
     </table>
+    
+    TÄLLE SIVULLE KEKSIN JOTAIN FIKSUMPAA SISÄLTÖÄ <br/>
 
     <a class="btn btn-info" type="button" href="../newbooking.php">Uusi varaus</a>

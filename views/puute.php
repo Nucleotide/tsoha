@@ -7,7 +7,7 @@
 
     <table class="table table-hover table-condensed">
         <tr>
-            <th>Lisääjä</th>
+            <th>Lisääjä/Muokkaaja</th>
             <th>Ajankohta</th>
             <th>Mökki</th>
             <th>Puute</th>
