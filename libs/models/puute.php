@@ -4,7 +4,6 @@ require_once 'kayttaja.php';
 require_once 'mokki.php';
 class Puute {
   
-  private $virheet = array();
   private $id;
   private $mokki_id;
   private $kayttaja_id;

@@ -1,5 +1,6 @@
 <?php
 require_once(dirname(dirname(__FILE__)) . '/tietokantayhteys.php');
+
 class Mokki {
   
   private $id;

@@ -1,39 +1,36 @@
-<form class="form-horizontal">
-<fieldset>
+<?php require_once 'libs/models/mokki.php'; ?>
+<?php if (!empty($data->virheet)): ?>
+<div class="alert alert-danger"><?php echo $data->virheet; ?></div>
+<?php endif; ?>
 
-<!-- Form Name -->
-<legend>Uusi varaus</legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Tiedot</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Vierailun alkuaika pp.kk.vvvv" class="form-control input-md" required=""><br/>
-  <input id="textinput" name="textinput" type="text" placeholder="Vierailun loppuaika pp.kk.vvvv" class="form-control input-md" required="">
-
-  </div>
-</div>
-<!-- Multiple Checkboxes -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="checkboxes">Valitse mökki</label>
-  <div class="col-md-4">
-  <div class="checkbox">
-    <label for="checkboxes-0">
-      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-      Mökki 1
-    </label>
+<form class="form-horizontal" role="form" action="../newbookingController.php" method="POST">
+    <fieldset>
+    <legend>Lisää vierailu</legend>
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Alkupvm</label>  
+        <div class="col-md-4">
+        <input name="alku" type="text" value="" placeholder="vvvv-kk-pp" class="form-control input-md" autofocus>
         </div>
-  <div class="checkbox">
-    <label for="checkboxes-1">
-      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-      Mökki 2
-    </label>
+    </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Loppupvm</label>  
+        <div class="col-md-4">
+            <input name="loppu" type="text" value="" placeholder="vvvv-kk-pp" class="form-control input-md" autofocus>
         </div>
-  </div>
-</div>
+    </div>
 
-</fieldset>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Valitse mökki</label>
+        <select name="mokki">
+        <?php foreach(Mokki::haeKaikki() as $mokki): ?>
+        <option value="<?php echo $mokki->getId(); ?>"><?php echo $mokki->getNimi(); ?></option>
+        <?php endforeach; ?>
+        </select>
+
+    </div>
+    <input type="hidden" name="user" value="<?php echo $_SESSION['user']; ?>">
+
+    </fieldset>
+    <button class="btn btn-success" type="submit">Tallenna</a></button>
+    <a class="btn btn-danger" type="button" href="index.php">Peruuta</a>
 </form>
-
-<a class="btn btn-success" type="button" href="#">Tallenna</a>
-<a class="btn btn-danger" type="button" href="#">Peruuta</a>
