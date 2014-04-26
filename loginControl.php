@@ -22,6 +22,7 @@ require_once 'libs/models/kayttaja.php';
 
   if ($kirjautuja->getName() === $kayttaja && $kirjautuja->getPassword() === $salasana) {
     $_SESSION['user'] = $kirjautuja->getId();
+    $_SESSION['ilmoitus'] = "Kirjautuminen ok!";
     header('Location: index.php');
   } else {
     naytaNakyma('login.php', array(

@@ -28,7 +28,7 @@
                 <li><a href="../needs.php">Kaikki puutteet</a></li>
                 <li><a href="../newneed.php">Lisää puute</a></li>
                 <li><a href="../newbooking.php">Lisää vierailu</a></li>
-                <li><a href="../logout.php">Kirjaudu ulos</a></li>
+                <li><a href="../libs/controllers/logout.php">Kirjaudu ulos</a></li>
             </ul>
         </nav>
         <?php endif; ?>

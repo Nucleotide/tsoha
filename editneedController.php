@@ -14,7 +14,6 @@
         header('Location: needs.php');
         $_SESSION['ilmoitus'] = "Muokkaus onnistui.";
     } else {
-
         naytaNakyma('editneed.php', array(
         'virheet' => "Kuvaus ei voi olla tyhjä",
         'kuvaus' => $kuvaus,

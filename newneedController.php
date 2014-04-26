@@ -15,7 +15,6 @@
         header('Location: needs.php');
         $_SESSION['ilmoitus'] = "Puute lisätty.";
     } else {
-
         naytaNakyma('addneed.php', array(
         'virheet' => "Kuvaus ei voi olla tyhjä"));
     }

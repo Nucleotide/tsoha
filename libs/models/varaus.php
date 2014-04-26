@@ -79,4 +79,10 @@ class Varaus {
     }
     return $tulokset;
   }
+  
+    public function poistaVaraus($tunnus) {
+        $sql = "DELETE FROM Varaus where id = ?";
+        $kysely = getTietokantayhteys()->prepare($sql);
+        $kysely->execute(array($tunnus));
+    }
 }

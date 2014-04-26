@@ -1,4 +1,4 @@
-<h1>Terve <?php echo $data->tervehdys; ?>!</h1>
+<h2>Terve <?php echo $data->tervehdys; ?>,</h2>
     <h3>Tulevia vierailuja mökeillä:</h3>
 
     <table class="table table-hover table-condensed">
@@ -17,7 +17,7 @@
                     <td><?php echo $varaus->getAlku(); ?></td>
                     <td><?php echo $varaus->getLoppu(); ?></td>
                     <td><?php echo $varaus->getMokkinimi(); ?></td>
-                    <td><form action="../deletebooking.php" method="POST">
+                    <td><form action="../deleteBooking.php" method="POST">
                         <input type="hidden" name="id" value="<?php echo $varaus->getId(); ?>">
                         <button class="btn btn-danger" type="submit">Poista</button></form>
                     </td>
