@@ -9,13 +9,13 @@
     <div class="form-group">
         <label class="col-md-4 control-label" for="textinput">Alkupvm</label>  
         <div class="col-md-4">
-        <input name="alku" type="text" value="" placeholder="vvvv-kk-pp" class="form-control input-md" autofocus>
+        <input name="alku" type="date" value="" placeholder="vvvv-kk-pp" class="form-control input-md" autofocus>
         </div>
     </div>
     <div class="form-group">
         <label class="col-md-4 control-label" for="textinput">Loppupvm</label>  
         <div class="col-md-4">
-            <input name="loppu" type="text" value="" placeholder="vvvv-kk-pp" class="form-control input-md" autofocus>
+            <input name="loppu" type="date" value="" placeholder="vvvv-kk-pp" class="form-control input-md" autofocus>
         </div>
     </div>
 

@@ -15,7 +15,7 @@
             <tr>
                 <td><?php echo $tarvike->getLuotu(); ?></td>
                 <td><?php echo $tarvike->getMokkiname(); ?></td>
-                <td><?php echo $tarvike->getKuvaus(); ?></td>
+                <td><?php echo htmlspecialchars($tarvike->getKuvaus()); ?></td>
                 <td><a class="btn btn-success" type="button" href="tarvike.php?id=<?php echo
                     $tarvike->getId() ?>">Muokkaa</a></td>
                 <td><form action="../deleteSupply.php" method="POST">

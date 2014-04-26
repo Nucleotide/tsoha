@@ -10,7 +10,8 @@
         </tr>
         <?php $date = new DateTime("now"); ?>
         <?php foreach($data->varaukset as $varaus): ?>
-            <?php if ($varaus->getAlku() < $date): ?>
+            <?php $dateTwo = new DateTime($varaus->getLoppu()); ?>
+            <?php if ($dateTwo > $date): ?>
             <tr>
                     <td><?php echo $varaus->getUsernimi(); ?></td>
                     <td><?php echo $varaus->getAlku(); ?></td>
@@ -24,3 +25,5 @@
             <?php endif; ?>
         <?php endforeach; ?>
     </table>
+    
+    <a class="btn btn-info" type="button" href="../newbooking.php">Lisää vierailu</a>

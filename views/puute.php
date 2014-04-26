@@ -17,7 +17,7 @@
                 <td><?php echo $puute->getUsername(); ?></td>
                 <td><?php echo $puute->getLuotu(); ?></td>
                 <td><?php echo $puute->getMokkiname(); ?></td>
-                <td><?php echo $puute->getKuvaus(); ?></td>
+                <td><?php echo htmlspecialchars($puute->getKuvaus()); ?></td>
                 <td><a class="btn btn-success" type="button" href="puute.php?id=<?php echo
                     $puute->getId() ?>">Muokkaa</a></td>
                 <td><form action="../deleteNeed.php" method="POST">

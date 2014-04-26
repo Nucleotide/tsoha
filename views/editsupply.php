@@ -9,7 +9,7 @@
     <div class="form-group">
         <label class="col-md-4 control-label" for="textinput">Mitä puuttuu?</label>  
         <div class="col-md-4">
-            <input name="kuvaus" type="text" value="<?php echo $data->kuvaus ?>" class="form-control input-md" autofocus>
+            <input name="kuvaus" type="text" value="<?php echo htmlspecialchars($data->kuvaus); ?>" class="form-control input-md" autofocus>
         </div>
     </div>
 
