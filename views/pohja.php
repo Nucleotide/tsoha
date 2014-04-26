@@ -6,7 +6,7 @@
         <link href="../css/bootstrap.css" rel="stylesheet">
         <link href="../css/signin.css" rel="stylesheet">
 		
-        <title>Demo</title>
+        <title>Mökkimuistio</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
